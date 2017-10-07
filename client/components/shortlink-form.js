@@ -24,7 +24,6 @@ class ShortLinkForm extends Component {
 			<form onSubmit={this.handleSubmit.bind(this)}>
 				<div className="row">
 					<div className="input-group col-xs-6 col-xs-offset-4 col-md-4 col-md-offset-4">
-						<div className="text-danger">{this.state.error}</div>
 						<input
 							ref="link"
 							className="form-control"
@@ -34,6 +33,7 @@ class ShortLinkForm extends Component {
 							<button className="btn btn-primary">Shorten</button>
 						</span>
 					</div>
+					<div className="text-danger">{this.state.error}</div>
 				</div>
 			</form>
 		);
