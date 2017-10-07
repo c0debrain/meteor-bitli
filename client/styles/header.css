@@ -1,0 +1,13 @@
+.jumbotron {
+	padding-top: 200px;
+	padding-bottom: 250px;
+	position: relative;
+	background-image: -webkit-linear-gradient(left, #0cebeb 0%, #29ffc6 110%);
+	background-image: -moz-linear-gradient(left, #0cebeb 0%, #29ffc6 110%);
+	background-image: -o-linear-gradient(left, #0cebeb 0%, #29ffc6 110%);
+	background-image: linear-gradient(to right, #0cebeb 0%, #29ffc6 110%);
+}
+
+#intro h1 {
+	color: #ffffff;
+}
