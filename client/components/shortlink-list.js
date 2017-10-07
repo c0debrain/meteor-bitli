@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { ShortLinks } from '../../imports/collections/shortlinks';
 
+const PER_PAGE = 1;
+
 class ShortLinksList extends Component {
+	componentWillMount() {
+		this.page = 1;
+	}
+
+	handleButtonClick() {
+		Meteor.subscribe('shortlinks', PER_PAGE * this.page + 1);
+		this.page += 1;
+	}
+
 	renderRows() {
 		return this.props.shortlinks.map(shortlink => {
 			const { url, token, clicks } = shortlink;
@@ -43,6 +54,15 @@ class ShortLinksList extends Component {
 						</thead>
 						<tbody>{this.renderRows()}</tbody>
 					</table>
+					<br />
+					<div className="text-center">
+						<button
+							className="btn btn-primary"
+							onClick={this.handleButtonClick.bind(this)}
+						>
+							Load More
+						</button>
+					</div>
 				</div>
 			</div>
 		);
@@ -50,6 +70,6 @@ class ShortLinksList extends Component {
 }
 
 export default createContainer(() => {
-	Meteor.subscribe('shortlinks');
+	Meteor.subscribe('shortlinks', PER_PAGE);
 	return { shortlinks: ShortLinks.find().fetch() };
 }, ShortLinksList);

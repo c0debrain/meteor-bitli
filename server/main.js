@@ -4,8 +4,8 @@ import { WebApp } from 'meteor/webapp';
 import ConnectRoute from 'connect-route';
 
 Meteor.startup(() => {
-	Meteor.publish('shortlinks', function() {
-		return ShortLinks.find({});
+	Meteor.publish('shortlinks', function(per_page) {
+		return ShortLinks.find({}, { limit: per_page });
 	});
 });
 
