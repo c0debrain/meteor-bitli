@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+let btnPrimary = {
+	color: '#ffffff',
+	'border-color': '#ffffff',
+	'background-color': '#00FBD3'
+};
+
 class ShortLinkForm extends Component {
 	constructor(props) {
 		super(props);
@@ -30,7 +36,9 @@ class ShortLinkForm extends Component {
 							placeholder="Enter a link to shorten"
 						/>
 						<span className="input-group-btn">
-							<button className="btn btn-primary">Shorten</button>
+							<button className="btn" style={btnPrimary}>
+								Shorten
+							</button>
 						</span>
 					</div>
 					<div className="text-danger">{this.state.error}</div>
