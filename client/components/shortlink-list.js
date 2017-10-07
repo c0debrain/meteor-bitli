@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { ShortLinks } from '../../imports/collections/shortlinks';
 
-const PER_PAGE = 1;
+const PER_PAGE = 5;
 
 class ShortLinksList extends Component {
 	componentWillMount() {
@@ -35,7 +35,7 @@ class ShortLinksList extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<div className="container" id="section-table">
 				<div className="text-center">
 					<h1>
 						<i className="glyphicon glyphicon-link" />
