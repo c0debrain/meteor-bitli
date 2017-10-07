@@ -41,7 +41,9 @@ class ShortLinkForm extends Component {
 							</button>
 						</span>
 					</div>
-					<div className="text-danger">{this.state.error}</div>
+					<div className="text-danger">
+						<h3>{this.state.error}</h3>
+					</div>
 				</div>
 			</form>
 		);
