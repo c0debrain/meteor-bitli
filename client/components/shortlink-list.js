@@ -28,7 +28,7 @@ class ShortLinksList extends Component {
 	renderRows() {
 		return this.props.shortlinks.map(shortlink => {
 			const { url, token, clicks } = shortlink;
-			const link = `http://localhost:3000/${token}`;
+			const link = `https://bitli.herokuapp.com/${token}`;
 
 			return (
 				<tr key={token}>
