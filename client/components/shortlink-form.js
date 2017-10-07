@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
 
 class ShortLinkForm extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { error: '' };
+	}
+
 	handleSubmit(event) {
 		event.preventDefault();
-		console.log(this.refs.link.value);
+
+		Meteor.call('shortlinks.insert', this.refs.link.value, error => {
+			if (error) {
+				this.setState({ error: 'Enter a valid Url!' });
+			} else {
+				this.setState({ error: '' });
+				this.refs.link.value = '';
+			}
+		});
 	}
 
 	render() {
@@ -11,6 +24,7 @@ class ShortLinkForm extends Component {
 			<form onSubmit={this.handleSubmit.bind(this)}>
 				<div className="row">
 					<div className="input-group col-xs-6 col-xs-offset-4 col-md-4 col-md-offset-4">
+						<div className="text-danger">{this.state.error}</div>
 						<input
 							ref="link"
 							className="form-control"

@@ -1,5 +1,8 @@
 import { Meteor } from 'meteor/meteor';
+import { ShortLinks } from '../imports/collections/shortlinks';
 
 Meteor.startup(() => {
-  // code to run on server at startup
+	Meteor.publish('shortlinks', function() {
+		return ShortLinks.find({});
+	});
 });
