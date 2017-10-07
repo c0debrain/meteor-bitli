@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { ShortLinks } from '../../imports/collections/shortlinks';
+import '../../imports/styles/section-table.css';
 
 const PER_PAGE = 5;
 

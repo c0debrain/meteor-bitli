@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/header.css';
+import '../../imports/styles/header.css';
 import ShortLinkForm from './shortlink-form';
 
 const Header = () => {
