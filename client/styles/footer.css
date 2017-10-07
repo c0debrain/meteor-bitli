@@ -1,0 +1,9 @@
+#footer {
+	padding-top: 50px;
+	padding-bottom: 25px;
+	position: relative;
+	background-image: -webkit-linear-gradient(left, #29ffc6 0%, #0cebeb 110%);
+	background-image: -moz-linear-gradient(left, #29ffc6 0%, #0cebeb 110%);
+	background-image: -o-linear-gradient(left, #29ffc6 0%, #0cebeb 110%);
+	background-image: linear-gradient(to right, #29ffc6 0%, #0cebeb 110%);
+}
