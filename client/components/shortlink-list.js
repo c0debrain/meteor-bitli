@@ -5,6 +5,16 @@ import '../../imports/styles/section-table.css';
 
 const PER_PAGE = 5;
 
+let btnPrimary = {
+	color: '#00FBD3',
+	'border-color': '#00FBD3',
+	'font-weight': 700
+};
+
+let hyperLink = {
+	color: 'orange'
+};
+
 class ShortLinksList extends Component {
 	componentWillMount() {
 		this.page = 1;
@@ -24,7 +34,7 @@ class ShortLinksList extends Component {
 				<tr key={token}>
 					<td>{url}</td>
 					<td>
-						<a href={link} target="_blank">
+						<a href={link} style={hyperLink} target="_blank">
 							{link}
 						</a>
 					</td>
@@ -58,7 +68,8 @@ class ShortLinksList extends Component {
 					<br />
 					<div className="text-center">
 						<button
-							className="btn btn-primary"
+							className="btn btn-lg"
+							style={btnPrimary}
 							onClick={this.handleButtonClick.bind(this)}
 						>
 							Load More
