@@ -43,7 +43,7 @@ const Header = () => {
 				<div className="jumbotron">
 					<div className="row">
 						<div className="col-md-12" className="text-center">
-							<h1>Minify your links with Bitli.</h1>
+							<h1>Minify your links with Bitli</h1>
 							<h3>A Bitly Clone built with Meteor and React.</h3>
 							<div className="container">
 								<ShortLinkForm />
