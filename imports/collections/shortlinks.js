@@ -1,3 +1,5 @@
+// Main Short Link collection file.
+
 import { Mongo } from 'meteor/mongo';
 import { check, Match } from 'meteor/check';
 import validUrl from 'valid-url';
