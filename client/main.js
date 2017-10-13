@@ -6,12 +6,14 @@ import App from './components/App';
 import NotFound from '../imports/ui/notFound';
 import Login from '../imports/ui/login';
 import Signup from '../imports/ui/signup';
+import Link from '../imports/ui/link';
 
 const routes = (
 	<Router history={browserHistory}>
 		<Route path="/" component={App} />
 		<Route path="/login" component={Login} />
 		<Route path="/signup" component={Signup} />
+		<Route path="/link" component={Link} />
 		<Route path="*" component={NotFound} />
 	</Router>
 );
