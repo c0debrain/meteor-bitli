@@ -1,20 +1,15 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './components/header';
-import ShortLinksList from './components/shortlink-list';
-import Footer from './components/footer';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
+import App from './components/App';
 
-const App = () => {
-	return (
-		<div className="App">
-			<Header />
-			<ShortLinksList />
-			<Footer />
-		</div>
-	);
-};
+const routes = (
+	<Router history={browserHistory}>
+		<Route path="/" component={App} />
+	</Router>
+);
 
 Meteor.startup(() => {
-	ReactDOM.render(<App />, document.querySelector('.root'));
+	render(routes, document.querySelector('.root'));
 });

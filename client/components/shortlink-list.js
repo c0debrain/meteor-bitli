@@ -28,7 +28,9 @@ class ShortLinksList extends Component {
 	renderRows() {
 		return this.props.shortlinks.map(shortlink => {
 			const { url, token, clicks } = shortlink;
-			const link = `https://bitli.herokuapp.com/${token}`;
+
+			// TODO: change ROOT_URL to https://bitli.herokuapp.com/ before deployment
+			const link = `http://localhost:3000//${token}`;
 
 			return (
 				<tr key={token}>
