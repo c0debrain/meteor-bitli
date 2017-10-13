@@ -1,6 +1,20 @@
 import React from 'react';
 import '../../imports/styles/header.css';
 import ShortLinkForm from './shortlink-form';
+import { Link } from 'react-router';
+
+let btnPrimary = {
+	color: '#ffffff',
+	'border-color': '#ffffff',
+	'background-color': '#00FBD3'
+};
+
+let decoration = {
+	'text-decoration': 'none',
+	color: '#ffffff',
+	'border-color': '#ffffff',
+	'background-color': '#00FBD3'
+};
 
 const Header = () => {
 	return (
@@ -47,6 +61,12 @@ const Header = () => {
 							<h3>A Bitly Clone built with Meteor and React.</h3>
 							<div className="container">
 								<ShortLinkForm />
+								<h3>Have an account?</h3>
+								<button className="btn btn-lg" style={btnPrimary}>
+									<Link to="/login" style={decoration}>
+										Login
+									</Link>
+								</button>
 							</div>
 						</div>
 					</div>
