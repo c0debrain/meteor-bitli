@@ -15,7 +15,11 @@ export default class Signup extends Component {
 		let email = this.refs.email.value.trim();
 		let password = this.refs.password.value.trim();
 		Accounts.createUser({ email, password }, err => {
-			console.log('Sign up', err);
+			if (err) {
+				this.setState({ error: err.reason });
+			} else {
+				this.setState({ error: '' });
+			}
 		});
 
 		// this.setState({ error: 'Incorrect Username or Password' });
