@@ -3,6 +3,7 @@ import { ShortLinks } from '../imports/collections/shortlinks';
 import { WebApp } from 'meteor/webapp';
 import ConnectRoute from 'connect-route';
 import '../imports/api/users';
+import '../imports/collections/links';
 
 Meteor.startup(() => {
 	Meteor.publish('shortlinks', function(per_page) {
