@@ -30,7 +30,7 @@ export default class Login extends Component {
 				<h1>Login to Create a Short Link</h1>
 				{this.state.error ? <p>{this.state.error}</p> : undefined}
 
-				<form onSubmit={this.onSubmit.bind(this)}>
+				<form onSubmit={this.onSubmit.bind(this)} noValidate>
 					<input type="email" name="email" ref="email" placeholder="Email" />
 					<input
 						type="password"
